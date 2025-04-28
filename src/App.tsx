@@ -1,12 +1,12 @@
-import { Header } from './components/Header'
-import { Post } from './components/Post'
-import { Sidebar } from './components/Sidebar'
+import { Header } from './components/Header';
+import { Post, PostProps } from './components/Post';
+import { Sidebar } from './components/Sidebar';
 
-import styles from './App.module.css'
+import styles from './App.module.css';
 
-import './global.css'
+import './global.css';
 
-const posts = [
+const posts: PostProps[] = [
   {
     id: 1,
     author: {
@@ -44,7 +44,7 @@ const posts = [
     ],
     publishedAt: new Date('2025-03-28 20:00:00'),
   },
-]
+];
 
 export function App() {
   return (
@@ -63,10 +63,10 @@ export function App() {
                 content={post.content}
                 publishedAt={post.publishedAt}
               />
-            )
+            );
           })}
         </main>
       </div>
     </div>
-  )
+  );
 }
